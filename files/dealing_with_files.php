@@ -35,7 +35,7 @@
         while(!feof($fileobj)){
             $line = fgets($fileobj);
 //            var_dump($line);
-            array_push($lines, $line);
+            array_push($lines, $line); # push element to the array
         }
         # add element to the array ?
         var_dump($lines);

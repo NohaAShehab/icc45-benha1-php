@@ -1,3 +1,16 @@
+<?php
+
+//  print_r($_GET);
+//  var_dump($_GET['errors']);
+  if(isset($_GET['errors'])){
+      $errors = json_decode($_GET['errors'],true);
+//      var_dump($errors);
+  }
+  if(isset($_GET['old_data'])){
+      $old_data = json_decode($_GET['old_data'],true);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +24,35 @@
 
         <form action="saveuser.php" method="post">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <label  class="form-label">Name</label>
                 <input type="text" name="name"
+                   value="<?php $val=isset($old_data['name'])?$old_data['name']:"";echo $val;?>"
                        class="form-control"  aria-describedby="emailHelp">
+                <span class="text-danger">
+                    <?php $error=isset($errors['name'])? $errors['name']: ''; echo $error; ?>
+                </span>
             </div>
+
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" name="email"
+                       value="<?php $eval=isset($old_data['email'])?$old_data['email']:"";echo $eval;?>"
                        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <span class="text-danger">
+                    <?php $emailerror=isset($errors['email'])? $errors['email']: ''; echo $emailerror; ?>
+                </span>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" name="password"
+                       value="<?php $pval=isset($old_data['password'])?$old_data['password']:"";echo $pval;?>"
+
                        class="form-control" id="exampleInputPassword1">
+
+                <span class="text-danger">
+                    <?php $passerror=isset($errors['password'])? $errors['password']: ''; echo $passerror; ?>
+                </span>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

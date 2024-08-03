@@ -14,6 +14,7 @@ if ($users){
         <th>Name</th>
         <th>Email</th>
         <th>Password</th>
+        <th>Delete</th>
      </tr>
 ";
 //    print_r($users);
@@ -27,7 +28,9 @@ if ($users){
         foreach ($user_info as $info) {
             echo "<td> {$info} </td>";
         }
-        echo "<tr>";
+
+        echo "<td><a href='' class='btn btn-danger'>Delete</a></td>
+<tr>";
 
 
     }
