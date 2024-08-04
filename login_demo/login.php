@@ -1,5 +1,13 @@
 <?php
 
+    session_start();
+    if($_SESSION['login']){
+        header("location:profile.php");
+    }else{
+        session_destroy();
+
+    }
+
   if(isset($_GET['errors'])){
       $errors = json_decode($_GET['errors'],true);
   }
