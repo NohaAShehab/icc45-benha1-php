@@ -36,10 +36,16 @@
     if(empty($_FILES['image']['tmp_name'])){
         $errors['image'] = "Image is required";
     }else{
-
+//      $info=  pathinfo($_FILES['image']['name']);
+//      var_dump($info['extension']);
         # validate extension
-    }
+        $ext= pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        var_dump($ext);
+        if( ! in_array($ext, ["jpg", "jpeg", "png"])){
+            $errors['image'] = "Only JPG, JPEG, PNG files are allowed";
+        }
 
+    }
     if($errors){
         generate_title("Error you need to fill all fields", 1,'red');
 
