@@ -3,3 +3,5 @@
 33:testing:test@gmail.com:khkjkjh:images/Comparative Performance of GPT-4,.pdf
 34:testing:test@gmail.com:jkhjkhjk:images/pic2.png
 35:testing:test@gmail.com:jkhjkhkj:images/35.png
+36:testing:test@gmail.com:kjkhjk:images/36.png
+37:testing:test@gmail.com:kjkkj:images/37.png

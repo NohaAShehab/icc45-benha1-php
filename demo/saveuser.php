@@ -8,6 +8,7 @@
     generate_title("upload image :::");
     # info about uploaded files --> $_FILES
     print_r($_FILES);
+//    exit;
 
 
 
@@ -90,7 +91,7 @@
             fclose($filobj);
             generate_title("DataSaved", 1, 'green');
             # redirect to another page ---> 302
-            header('Location: data_table.php');
+//            header('Location: data_table.php');
         }
 
     }
