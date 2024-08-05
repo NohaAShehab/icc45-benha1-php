@@ -102,7 +102,7 @@ function select($conn){
     $select_qurty = "select * from `users`";
     $res = mysqli_query($conn, $select_qurty);
     var_dump($res); # object contain info about data ??
-//    var_dump($conn);
+    var_dump($conn);
 
         $rows = mysqli_fetch_all($res, MYSQLI_ASSOC);
         print_r($rows);
