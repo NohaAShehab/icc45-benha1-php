@@ -97,4 +97,10 @@ abstract class Test{
 
 
 
+abstract Class STD{
+    abstract function abc();
+    function test(){
 
+    }
+
+}
